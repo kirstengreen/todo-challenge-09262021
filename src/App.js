@@ -9,9 +9,11 @@ export default function App() {
 
   const [ todos, setTodos ] = useState([
     {
+      id: 1,
       name: 'Cook dinner'
     },
     {
+      id: 2,
       name: 'Water plants'
     }
   ])

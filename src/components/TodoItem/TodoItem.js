@@ -1,8 +1,8 @@
 import './TodoItem.css'
 
-export default function TodoItem( {key, name} ) {
+export default function TodoItem( {id, name} ) {
   return (
-    <li key={key} className='todo_item'>
+    <li key={id} className='todo_item'>
       <p>{name}</p>
       <p><img src='/img/icon__close.svg' alt='delete icon' /></p>
     </li>
