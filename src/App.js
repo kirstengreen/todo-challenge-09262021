@@ -4,6 +4,9 @@ import './App.css';
   return (
     <div>
       <h1>ToDo</h1>
+      {/* Add item component */}
+      {/* List component */}
+      {/* List footer component */}
     </div>
   );
 }
