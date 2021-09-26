@@ -18,11 +18,18 @@ export default function App() {
     }
   ])
 
+
+  // DELETE TODO
+  const deleteTodo = (id) => {
+    console.log(`${id} is deleted`)
+  }
+
+
   return (
     <div>
       <Header headerText='ToDo' />
       <AddTodoItem placeholderText='Create a new item...' />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} deleteTodo={deleteTodo}/>
       <ListFooter />
     </div>
   );

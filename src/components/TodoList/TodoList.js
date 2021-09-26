@@ -1,12 +1,12 @@
 import './TodoList.css'
 import TodoItem from '../TodoItem/TodoItem'
 
-export default function TodoList( {todos} ) {
+export default function TodoList( {todos, deleteTodo} ) {
 
   return (
     <ul className='todo_list_container'>
       {todos.map( (todo) => (
-        <TodoItem key={todo.id} name={todo.name}/>
+        <TodoItem key={todo.id} name={todo.name} deleteTodo={deleteTodo}/>
       ))}
     </ul>
   )
