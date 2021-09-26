@@ -1,11 +1,12 @@
 import './App.css'
+import Header from './components/Header/Header'
 import AddListItem from './components/AddListItem/AddListItem'
 
  export default function App() {
   return (
     <div>
-      <h1>ToDo</h1>
-      <AddListItem placeholderText='Create a new item...'/>
+      <Header headerText='ToDo' />
+      <AddListItem placeholderText='Create a new item...' />
       {/* List component */}
       {/* List footer component */}
     </div>
