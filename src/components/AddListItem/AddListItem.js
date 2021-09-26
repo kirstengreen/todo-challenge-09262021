@@ -6,7 +6,7 @@ export default function AddListItem( props ) {
 
   return(
     <input
-      placeholder={props.placholderText}>
-    </input>
+      placeholder={props.placeholderText} 
+    />
   )
 }
