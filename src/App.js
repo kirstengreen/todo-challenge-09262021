@@ -9,18 +9,29 @@ export default function App() {
 
   const [ todos, setTodos ] = useState([
     {
+      id: 1,
       name: 'Cook dinner'
     },
     {
+      id: 2,
       name: 'Water plants'
     }
   ])
+
+
+  // DELETE TODO
+  const deleteTodo = (id) => {
+    setTodos(todos.filter( (todo) => 
+      todo.id !== id 
+    ))
+  }
+
 
   return (
     <div>
       <Header headerText='ToDo' />
       <AddTodoItem placeholderText='Create a new item...' />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} deleteTodo={deleteTodo}/>
       <ListFooter />
     </div>
   );
