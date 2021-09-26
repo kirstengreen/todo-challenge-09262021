@@ -6,7 +6,7 @@ export default function TodoList( {todos, deleteTodo} ) {
   return (
     <ul className='todo_list_container'>
       {todos.map( (todo) => (
-        <TodoItem key={todo.id} name={todo.name} deleteTodo={deleteTodo}/>
+        <TodoItem todo={todo} deleteTodo={deleteTodo}/>
       ))}
     </ul>
   )

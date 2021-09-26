@@ -1,10 +1,10 @@
 import './TodoItem.css'
 
-export default function TodoItem( {id, name, deleteTodo} ) {
+export default function TodoItem( {todo, deleteTodo} ) {
   return (
-    <li key={id} className='todo_item'>
-      <p>{name}</p>
-      <p><img src='/img/icon__close.svg' alt='delete icon' onClick={ () => deleteTodo(id) }/></p>
+    <li key={todo.id} className='todo_item'>
+      <p>{todo.name}</p>
+      <p><img src='/img/icon__close.svg' alt='delete icon' onClick={ () => deleteTodo(todo.id) }/></p>
     </li>
   )
 }
