@@ -21,7 +21,9 @@ export default function App() {
 
   // DELETE TODO
   const deleteTodo = (id) => {
-    console.log(`${id} is deleted`)
+    setTodos(todos.filter( (todo) => 
+      todo.id !== id 
+    ))
   }
 
 
