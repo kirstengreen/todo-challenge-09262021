@@ -1,13 +1,17 @@
 import './TodoList.css'
 
-export default function TodoList( props ) {
+export default function TodoList( {todos} ) {
 
   // Props: listItems
 
   return (
     <div>
       <ul>
-        <li>{props.listItems}</li>
+        {todos.map( (todo, i) => (
+          <li key={i}>
+            {todo.name}
+          </li>
+        ))}
       </ul>
     </div>
   )
