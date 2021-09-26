@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Layout from './components/Layout/Layout'
 import Header from './components/Header/Header'
 import AddTodoItem from './components/AddTodoItem/AddTodoItem'
 import TodoList from './components/TodoList/TodoList'
@@ -28,11 +29,11 @@ export default function App() {
 
 
   return (
-    <div>
+    <Layout>
       <Header headerText='ToDo' />
       <AddTodoItem placeholderText='Create a new item...' />
       <TodoList todos={todos} deleteTodo={deleteTodo}/>
       <ListFooter />
-    </div>
+    </Layout>
   );
 }
