@@ -18,14 +18,24 @@ export default function App() {
     {
       id: 2,
       name: 'Water plants',
-      complete: true
+      complete: false
     },
     {
       id: 3,
       name: 'Take out the trash',
-      complete: true
+      complete: false
     }
   ])
+
+
+  // TOGGLE FOR COMPLETION STATUS
+  const toggleComplete = (id) => {
+    setTodos( todos.map( (todo) => 
+      todo.id === id ? {
+        ...todo, complete: !todo.complete
+      } : todo
+    ))
+  }
 
 
   // DELETE TODO
@@ -50,7 +60,10 @@ export default function App() {
       <AddTodoItem placeholderText='Create a new item...' />
       { todos.length > 0 ? (
         <Fragment>
-          <TodoList todos={todos} deleteTodo={deleteTodo} />
+          <TodoList 
+            todos={todos} 
+            deleteTodo={deleteTodo} 
+            toggleComplete={toggleComplete}/>
           <ListFooter deleteCompleted={deleteCompleted} />
         </Fragment>
       ) : (

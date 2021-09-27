@@ -36,6 +36,7 @@
 }
 
 .todo_item label {
+  cursor: pointer;
   vertical-align: middle;
 }
 
