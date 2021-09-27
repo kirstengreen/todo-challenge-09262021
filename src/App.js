@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useState, Fragment } from 'react'
 import './App.css'
 import Layout from './components/Layout/Layout'
 import Header from './components/Header/Header'
 import AddTodoItem from './components/AddTodoItem/AddTodoItem'
 import TodoList from './components/TodoList/TodoList'
 import ListFooter from './components/ListFooter/ListFooter'
-import { createPortal } from 'react-dom'
+import EmptyTodoList from './components/EmptyTodoList/EmptyTodoList'
 
 export default function App() {
 
@@ -21,7 +21,7 @@ export default function App() {
       complete: true
     },
     {
-      id: 2,
+      id: 3,
       name: 'Take out the trash',
       complete: true
     }
@@ -48,8 +48,14 @@ export default function App() {
     <Layout>
       <Header headerText='ToDo' />
       <AddTodoItem placeholderText='Create a new item...' />
-      <TodoList todos={todos} deleteTodo={deleteTodo} />
-      <ListFooter deleteCompleted={deleteCompleted} />
+      { todos.length > 0 ? (
+        <Fragment>
+          <TodoList todos={todos} deleteTodo={deleteTodo} />
+          <ListFooter deleteCompleted={deleteCompleted} />
+        </Fragment>
+      ) : (
+        <EmptyTodoList message='You have no items in your todo list. Create an item to begin tracking your list.'/>
+      )}
     </Layout>
   );
 }
