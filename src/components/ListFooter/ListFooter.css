@@ -1,4 +1,12 @@
+.footer_container{
+  font-size: 12px;
+  color: rgba( 255, 255, 255, .4 )
+}
+
 .list_footer_options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 0 0 24px;
   padding: 20px 16px;
   background-color: #25273C;
@@ -6,7 +14,28 @@
 }
 
 .list_footer_filters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: #25273C;
   padding: 20px;
   border-radius: 7px;
+}
+
+.list_footer_filters div:not(:last-child) {
+  margin-right: 12px;
+}
+
+.list_action {
+  font-weight: 700;
+}
+
+.list_action:hover {
+  cursor: pointer;
+  color: #fff
+}
+
+.list_action:active {
+  color: #72BEF8;
 }
