@@ -1,8 +1,6 @@
 import './ListFooter.css'
 
-export default function ListFooter( props ) {
-
-  // Props: checked(for delete checked), notChecked(count not completed)
+export default function ListFooter( {deleteCompleted} ) {
 
   return (
     <div className='footer_container'>
@@ -10,7 +8,7 @@ export default function ListFooter( props ) {
         <div className="items_left">
           # items left
         </div>
-        <div className='list_action'>
+        <div className='list_action' onClick={ () => deleteCompleted() }>
           Clear completed
         </div>
       </div>
