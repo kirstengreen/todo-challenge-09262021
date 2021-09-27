@@ -11,6 +11,8 @@
 /* SVG STYLES */
 
 .delete_icon svg {
+  display: flex;
+  align-items: center;
   fill: #ffffff;
   opacity: .4;
 }
