@@ -1,0 +1,12 @@
+.list_footer_options {
+  margin: 0 0 24px;
+  padding: 20px 16px;
+  background-color: #25273C;
+  border-radius: 0 0 7px 7px;
+}
+
+.list_footer_filters {
+  background-color: #25273C;
+  padding: 20px;
+  border-radius: 7px;
+}

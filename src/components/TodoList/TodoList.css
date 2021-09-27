@@ -1,4 +1,7 @@
 .todo_list_container {
-  padding-left: 0;
+  background-color: #25273C;
+  margin: 24px 0 0;
+  padding: 0;
   list-style: none;
+  border-radius: 7px 7px 0px 0px;
 }

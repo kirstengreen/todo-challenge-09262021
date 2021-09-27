@@ -1,5 +1,8 @@
 .todo_item {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid rgba( 255, 255, 255, .2);
 }

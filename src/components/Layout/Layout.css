@@ -1,0 +1,21 @@
+.page_header_bg {
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 232px;
+  background-color: #181824;
+  background-size: cover;
+  background-image: url('./../../assets/bg__trees.png');
+  
+  background-image: linear-gradient(131.73deg, rgba(114, 190, 248, 0.8) 14.46%, rgba(166, 116, 242, 0.8) 87.62%), url('./../../assets/bg__trees.png');
+  background-image: -moz-linear-gradient(131.73deg, rgba(114, 190, 248, 0.8) 14.46%, rgba(166, 116, 242, 0.8) 87.62%), url('./../../assets/bg__trees.png');
+  background-image: -webkit-gradient(linear, 131.73deg, rgba(114, 190, 248, 0.8) 14.46%, rgba(166, 116, 242, 0.8) 87.62%), url('./../../assets/bg__trees.png');
+  background-image: -webkit-linear-gradient(131.73deg, rgba(114, 190, 248, 0.8) 14.46%, rgba(166, 116, 242, 0.8) 87.62%), url('./../../assets/bg__trees.png');
+  background-image: -o-linear-gradient(131.73deg, rgba(114, 190, 248, 0.8) 14.46%, rgba(166, 116, 242, 0.8) 87.62%), url('./../../assets/bg__trees.png');
+}
+
+.page_container {
+  margin: 48px 20px;
+}
