@@ -18,12 +18,20 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.list_footer_filters__mobile {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: #25273C;
   padding: 20px;
   border-radius: 7px;
 }
 
-.list_footer_filters div:not(:last-child) {
+.list_footer_filters div:not(:last-child),
+.list_footer_filters__mobile div:not(:last-child) {
   margin-right: 12px;
 }
 

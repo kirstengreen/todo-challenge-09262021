@@ -1,4 +1,4 @@
-import { useState, Fragment } from 'react'
+import { useState, useEffect, Fragment } from 'react'
 import './App.css'
 import Layout from './components/Layout/Layout'
 import Header from './components/Header/Header'
@@ -9,6 +9,8 @@ import EmptyTodoList from './components/EmptyTodoList/EmptyTodoList'
 
 export default function App() {
 
+  const mobileBreakpoint = 960;
+  const [ viewportWidth, setViewportWidth ] = useState(window.innerWidth)
   const [ todos, setTodos ] = useState([
     {
       id: 1,
@@ -26,6 +28,16 @@ export default function App() {
       complete: false
     }
   ])
+
+
+  // LISTEN FOR AND UPDATE VIEWPORT SIZE CHANGE
+  useEffect( () => {
+    const updateViewportWidth = () => {
+      setViewportWidth(window.innerWidth)
+    }
+    window.addEventListener('resize', updateViewportWidth)
+    return () => window.removeEventListener('resize', updateViewportWidth)
+  })
 
 
   // TOGGLE FOR COMPLETION STATUS
@@ -64,7 +76,10 @@ export default function App() {
             todos={todos} 
             deleteTodo={deleteTodo} 
             toggleComplete={toggleComplete}/>
-          <ListFooter deleteCompleted={deleteCompleted} />
+          <ListFooter 
+            deleteCompleted={deleteCompleted} 
+            viewportWidth={viewportWidth}
+            mobileBreakpoint={mobileBreakpoint}/>
         </Fragment>
       ) : (
         <EmptyTodoList message='You have no items in your todo list. Create an item to begin tracking your list.'/>
