@@ -1,7 +1,7 @@
 import './TodoList.css'
 import TodoItem from '../TodoItem/TodoItem'
 
-export default function TodoList( {todos, deleteTodo, toggleComplete } ) {
+export default function TodoList( {todos, deleteTodo, toggleComplete, viewportWidth, mobileBreakpoint } ) {
 
   return (
     <ul className='todo_list_container'>
@@ -10,7 +10,9 @@ export default function TodoList( {todos, deleteTodo, toggleComplete } ) {
           key={todo.id} 
           todo={todo} 
           deleteTodo={deleteTodo}
-          toggleComplete={toggleComplete}/>
+          toggleComplete={toggleComplete}
+          viewportWidth={viewportWidth}
+          mobileBreakpoint={mobileBreakpoint} />
       ))}
     </ul>
   )

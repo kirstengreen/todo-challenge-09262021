@@ -1,8 +1,8 @@
 import './TodoItem.css'
 
-export default function TodoItem( {todo, deleteTodo, toggleComplete} ) {
+export default function TodoItem( {todo, deleteTodo, toggleComplete, viewportWidth, mobileBreakpoint} ) {
   return (
-    <li className='todo_item_container'>
+    <li className={`todo_item_container ${ viewportWidth > mobileBreakpoint ? 'todo_item_container__desktop' : '' }`}>
       <div className='todo_item'>
         <label htmlFor={todo.name}>
           <span className={`${ todo.complete ? 'complete_text' : '' }`}>{todo.name}</span>

@@ -69,7 +69,7 @@ export default function App() {
   return (
     <Layout 
       mobileBreakpoint={mobileBreakpoint}
-      viewportWidth={viewportWidth} >
+      viewportWidth={viewportWidth}>
       <Header 
         headerText='ToDo' 
         viewportWidth={viewportWidth}
@@ -83,11 +83,13 @@ export default function App() {
           <TodoList 
             todos={todos} 
             deleteTodo={deleteTodo} 
-            toggleComplete={toggleComplete}/>
+            toggleComplete={toggleComplete}
+            viewportWidth={viewportWidth}
+            mobileBreakpoint={mobileBreakpoint} />
           <ListFooter 
             deleteCompleted={deleteCompleted} 
             viewportWidth={viewportWidth}
-            mobileBreakpoint={mobileBreakpoint}/>
+            mobileBreakpoint={mobileBreakpoint} />
         </Fragment>
       ) : (
         <EmptyTodoList 
