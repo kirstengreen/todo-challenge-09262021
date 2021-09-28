@@ -28,6 +28,7 @@ export default function App() {
       complete: false
     }
   ])
+  const [ activeCount, setActiveCount] = useState( todos.length )
 
 
   // LISTEN FOR AND UPDATE VIEWPORT SIZE CHANGE
@@ -38,6 +39,18 @@ export default function App() {
     window.addEventListener('resize', updateViewportWidth)
     return () => window.removeEventListener('resize', updateViewportWidth)
   })
+
+
+  // UPDATE ACTIVE TASKS COUNTER
+  useEffect( () => { 
+    let counter = todos.length 
+    for (let i=0; i < todos.length; i++) {
+      if (todos[i].complete !== false) {
+        counter--
+      }
+    }
+    setActiveCount(counter)
+  }, [todos] )
 
 
   // TOGGLE FOR COMPLETION STATUS
@@ -87,6 +100,7 @@ export default function App() {
             viewportWidth={viewportWidth}
             mobileBreakpoint={mobileBreakpoint} />
           <ListFooter 
+            activeCount={activeCount}
             deleteCompleted={deleteCompleted} 
             viewportWidth={viewportWidth}
             mobileBreakpoint={mobileBreakpoint} />
