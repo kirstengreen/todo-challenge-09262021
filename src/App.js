@@ -67,7 +67,9 @@ export default function App() {
 
 
   return (
-    <Layout>
+    <Layout 
+      mobileBreakpoint={mobileBreakpoint}
+      viewportWidth={viewportWidth} >
       <Header headerText='ToDo' />
       <AddTodoItem placeholderText='Create a new item...' />
       { todos.length > 0 ? (

@@ -16,6 +16,15 @@
   background-image: -o-linear-gradient(131.73deg, rgba(114, 190, 248, 0.8) 14.46%, rgba(166, 116, 242, 0.8) 87.62%), url('./../../assets/bg__trees.png');
 }
 
+.page_header_bg__desktop {
+  height: 352px;
+}
+
 .page_container {
   margin: 48px 20px;
+}
+
+.page_container__desktop {
+  max-width: 800px;
+  margin: 88px auto;
 }
