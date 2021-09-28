@@ -2,14 +2,14 @@ import './ListFooter.css'
 import ListFooterMobile from './ListFooterMobile'
 import ListFooterDesktop from './ListFooterDesktop'
 
-export default function ListFooter( {deleteCompleted, viewportWidth, mobileBreakpoint} ) {
+export default function ListFooter( {activeCount, deleteCompleted, viewportWidth, mobileBreakpoint} ) {
 
   return (
     <div className={`footer_container ${ viewportWidth > mobileBreakpoint ? 'footer_container__desktop' : '' }`}>
       { viewportWidth < mobileBreakpoint ? (
-        <ListFooterMobile deleteCompleted={deleteCompleted} />
+        <ListFooterMobile activeCount={activeCount} deleteCompleted={deleteCompleted} />
       ) : (
-        <ListFooterDesktop deleteCompleted={deleteCompleted} />
+        <ListFooterDesktop activeCount={activeCount} deleteCompleted={deleteCompleted} />
       )
     }
   </div>
