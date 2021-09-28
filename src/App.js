@@ -90,7 +90,10 @@ export default function App() {
             mobileBreakpoint={mobileBreakpoint}/>
         </Fragment>
       ) : (
-        <EmptyTodoList message='You have no items in your todo list. Create an item to begin tracking your list.'/>
+        <EmptyTodoList 
+          viewportWidth={viewportWidth}
+          mobileBreakpoint={mobileBreakpoint}
+          message='You have no items in your todo list. Create an item to begin tracking your list.'/>
       )}
     </Layout>
   );
