@@ -5,7 +5,7 @@ import ListFooterDesktop from './ListFooterDesktop'
 export default function ListFooter( {deleteCompleted, viewportWidth, mobileBreakpoint} ) {
 
   return (
-    <div className='footer_container'>
+    <div className={`footer_container ${ viewportWidth > mobileBreakpoint ? 'footer_container__desktop' : '' }`}>
       { viewportWidth < mobileBreakpoint ? (
         <ListFooterMobile deleteCompleted={deleteCompleted} />
       ) : (
