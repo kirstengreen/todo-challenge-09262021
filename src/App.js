@@ -70,7 +70,10 @@ export default function App() {
     <Layout 
       mobileBreakpoint={mobileBreakpoint}
       viewportWidth={viewportWidth} >
-      <Header headerText='ToDo' />
+      <Header 
+        headerText='ToDo' 
+        viewportWidth={viewportWidth}
+        mobileBreakpoint={mobileBreakpoint} />
       <AddTodoItem placeholderText='Create a new item...' />
       { todos.length > 0 ? (
         <Fragment>

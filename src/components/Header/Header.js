@@ -1,12 +1,11 @@
 import './Header.css'
 
-export default function Header( props ) {
-
-  // Props: headerText
+export default function Header( {headerText, viewportWidth, mobileBreakpoint } ) {
 
   return(
-    <div>
-      <h1>{props.headerText}</h1>
-    </div>
+    <h1 
+      className={`${ viewportWidth > mobileBreakpoint ? 'h1__desktop' : '' }`}>
+      {headerText}
+    </h1>
   )
 }
