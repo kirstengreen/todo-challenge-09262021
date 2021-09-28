@@ -67,22 +67,35 @@ export default function App() {
 
 
   return (
-    <Layout>
-      <Header headerText='ToDo' />
-      <AddTodoItem placeholderText='Create a new item...' />
+    <Layout 
+      mobileBreakpoint={mobileBreakpoint}
+      viewportWidth={viewportWidth}>
+      <Header 
+        headerText='ToDo' 
+        viewportWidth={viewportWidth}
+        mobileBreakpoint={mobileBreakpoint} />
+      <AddTodoItem 
+        placeholderText='Create a new item...' 
+        viewportWidth={viewportWidth}
+        mobileBreakpoint={mobileBreakpoint} />
       { todos.length > 0 ? (
         <Fragment>
           <TodoList 
             todos={todos} 
             deleteTodo={deleteTodo} 
-            toggleComplete={toggleComplete}/>
+            toggleComplete={toggleComplete}
+            viewportWidth={viewportWidth}
+            mobileBreakpoint={mobileBreakpoint} />
           <ListFooter 
             deleteCompleted={deleteCompleted} 
             viewportWidth={viewportWidth}
-            mobileBreakpoint={mobileBreakpoint}/>
+            mobileBreakpoint={mobileBreakpoint} />
         </Fragment>
       ) : (
-        <EmptyTodoList message='You have no items in your todo list. Create an item to begin tracking your list.'/>
+        <EmptyTodoList 
+          viewportWidth={viewportWidth}
+          mobileBreakpoint={mobileBreakpoint}
+          message='You have no items in your todo list. Create an item to begin tracking your list.'/>
       )}
     </Layout>
   );

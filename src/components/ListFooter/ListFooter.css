@@ -3,6 +3,10 @@
   color: rgba( 255, 255, 255, .4 )
 }
 
+.footer_container__desktop {
+  font-size: 16px;
+}
+
 .list_footer_options {
   display: flex;
   flex-direction: row;
@@ -11,6 +15,10 @@
   padding: 20px 16px;
   background-color: #25273C;
   border-radius: 0 0 7px 7px;
+}
+
+.footer_container__desktop .list_footer_options {
+  padding: 26px 16px;
 }
 
 .list_footer_filters {

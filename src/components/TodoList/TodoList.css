@@ -5,3 +5,7 @@
   list-style: none;
   border-radius: 7px 7px 0px 0px;
 }
+
+.todo_list_container__desktop {
+  margin: 36px 0 0;
+}
