@@ -28,7 +28,7 @@ This todo list app was presented as a coding challege. I was given a Figma mocku
 
 Before I started coding, I wanted to make sure I understood the app structure and what features I needed to build. I did a sketch in Goodnotes before jumping into the code.
 
-*img file*
+![alt text](https://raw.githubusercontent.com/kirstengreen/todo-challenge-09262021/main/public/img/project-sketch.jpeg "Sketch breakdown of todo app")
 
 ## What I Learned
 
