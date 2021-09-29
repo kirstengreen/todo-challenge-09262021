@@ -12,21 +12,21 @@ export default function App() {
   const mobileBreakpoint = 960;
   const [ viewportWidth, setViewportWidth ] = useState(window.innerWidth)
   const [ todos, setTodos ] = useState([
-    {
-      id: 1,
-      name: 'Cook dinner',
-      complete: false
-    },
-    {
-      id: 2,
-      name: 'Water plants',
-      complete: false
-    },
-    {
-      id: 3,
-      name: 'Take out the trash',
-      complete: false
-    }
+    // {
+    //   id: 1,
+    //   name: 'Cook dinner',
+    //   complete: false
+    // },
+    // {
+    //   id: 2,
+    //   name: 'Water plants',
+    //   complete: false
+    // },
+    // {
+    //   id: 3,
+    //   name: 'Take out the trash',
+    //   complete: false
+    // }
   ])
   const [ activeCount, setActiveCount] = useState( todos.length )
 
@@ -62,6 +62,16 @@ export default function App() {
     ))
   }
 
+  
+  // ADD TODO
+  const addTodo = (todo) => {
+    const id = Math.floor(Math.random() * 1000) + 1
+    const newTodo = { id, ...todo }
+    setTodos(
+      [...todos, newTodo]
+    )
+  }
+
 
   // DELETE TODO
   const deleteTodo = (id) => {
@@ -88,6 +98,8 @@ export default function App() {
         viewportWidth={viewportWidth}
         mobileBreakpoint={mobileBreakpoint} />
       <AddTodoItem 
+        todos={todos}
+        addTodo={addTodo}
         placeholderText='Create a new item...' 
         viewportWidth={viewportWidth}
         mobileBreakpoint={mobileBreakpoint} />
