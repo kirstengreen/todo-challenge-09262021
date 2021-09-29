@@ -17,7 +17,8 @@ This todo list app was presented as a coding challege. I was given a Figma mocku
 ## Known Issues
 
 * Create item input design is not complete
-* Filter active state not active 
+* Filter active state not active
+* Checkbox hoverstate border effect is not impletemented, opted for bg effect to start
 
 ## Understanding the Challenge
 
