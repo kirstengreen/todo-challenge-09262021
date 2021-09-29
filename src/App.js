@@ -12,21 +12,21 @@ export default function App() {
   const mobileBreakpoint = 960;
   const [ viewportWidth, setViewportWidth ] = useState(window.innerWidth)
   const [ todos, setTodos ] = useState([
-    // {
-    //   id: 1,
-    //   name: 'Cook dinner',
-    //   complete: false
-    // },
-    // {
-    //   id: 2,
-    //   name: 'Water plants',
-    //   complete: false
-    // },
-    // {
-    //   id: 3,
-    //   name: 'Take out the trash',
-    //   complete: false
-    // }
+    {
+      id: 1,
+      name: 'Cook dinner',
+      complete: false
+    },
+    {
+      id: 2,
+      name: 'Water plants',
+      complete: false
+    },
+    {
+      id: 3,
+      name: 'Take out the trash',
+      complete: false
+    }
   ])
   const [ activeCount, setActiveCount] = useState( todos.length )
   const [ filteredTodos, setFilteredTodos ] = useState( todos )
@@ -63,16 +63,6 @@ export default function App() {
     ))
   }
 
-  
-  // ADD TODO
-  const addTodo = (todo) => {
-    const id = Math.floor(Math.random() * 1000) + 1
-    const newTodo = { id, ...todo }
-    setTodos(
-      [...todos, newTodo]
-    )
-  }
-
 
   // FILTER TODOS BY ALL
   const allFilter = () => {
@@ -102,6 +92,16 @@ export default function App() {
     setTodos(todos.filter( (todo) => 
       todo.id !== id 
     ))
+  }
+
+
+  // ADD TODO
+  const addTodo = (todo) => {
+    const id = Math.floor(Math.random() * 1000) + 1
+    const newTodo = { id, ...todo }
+    setTodos(
+      [...todos, newTodo]
+    )
   }
 
 
