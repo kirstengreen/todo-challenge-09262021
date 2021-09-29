@@ -99,7 +99,7 @@ export default function App() {
     const id = Math.floor(Math.random() * 1000) + 1
     const newTodo = { id, ...todo }
     setTodos(
-      [...todos, newTodo]
+      [newTodo, ...todos]
     )
   }
 
