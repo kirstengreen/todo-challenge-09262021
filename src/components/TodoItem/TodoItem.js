@@ -10,7 +10,7 @@ export default function TodoItem( {todo, deleteTodo, toggleComplete, viewportWid
             type='checkbox' 
             name={todo.name} 
             id={todo.name} 
-            checked={todo.complete}
+            defaultChecked={todo.complete}
             onClick={ () => toggleComplete(todo.id) }/>
           <span className='checkbox'></span>
         </label>
