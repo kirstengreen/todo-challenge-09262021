@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+## Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This todo list app was presented as a coding challege. I was given a Figma mockup and tasked to recreate the design and desired functionality using the tech of my choice (React,Vue, or vanilia JS). I chose React because it is the JS framework that I have been focusing my professional development on recently. This project would give me another chance to test my growing skillset.
 
-## Available Scripts
+## How to Use
 
-In the project directory, you can run:
+* Clone repo from Code dropdown
+* run npm install - to install dependencies 
+* npm start - to run development server
 
-### `npm start`
+## Technology
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* React
+* JavaScript
+* HTML & CSS
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Known Issues
 
-### `npm test`
+## Understanding the Challenge
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Before I begain coding, I wanted to make sure I understood the app structure and what features I needed to build. I did a sketch in Goodnotes before jumping into the code.
 
-### `npm run build`
+*img file*
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## What I Learned
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* I created a filtered list for the first time
+* I learned how important it is to understand how different interactions interact with each other and effect state
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## What I Want to Improve
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Fix bugs!
+* Learn to map out interactions and know how they link together/effect eachother. I created many avoidable bugs by creating certain features before or not considering others.
+* Use SCSS and SCSS mixins. It would have made conditional rendering easier and more future proof
+* Find a better way to implement conditional rendering for components and CSS. Files were getting a little unwieldy and I feel like there was a simplier way to do things
+* Complete a general file cleanup and find ways to simplify and make the code more DRY 
