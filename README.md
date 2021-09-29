@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+## Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live site: <https://todo-challenge-09262021.vercel.app/>
 
-## Available Scripts
+This todo list app was presented as a coding challege. I was given a Figma mockup and tasked to recreate the design and desired functionality using the tech of my choice (React,Vue, or vanilia JS). I chose React because it is the JS framework that I have been focusing most my professional development on recently. This project would give me another chance to test my growing skillset.
 
-In the project directory, you can run:
+## How to Use
 
-### `npm start`
+* Clone repo from Code dropdown
+* run npm install - to install dependencies 
+* npm start - to run development server
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technology
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* React
+* JavaScript
+* HTML & CSS
+* Vercel for deployment
 
-### `npm test`
+## Known Issues
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Create todo input UI is not complete
+* Filter active UI state is not implemented
+* Checkbox hoverstate border effect is not impletemented, opted for bg effect to start
+* Need a screen for when there are no active or complete tasks when filtered
 
-### `npm run build`
+## Understanding the Challenge
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Before I started coding, I wanted to make sure I understood the app structure and what features I needed to build. I did a sketch in Goodnotes before jumping into the code.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+*img file*
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## What I Learned
 
-### `npm run eject`
+* I created a filtered list for the first time, which really tested my understanding of state
+* Had an aha moment with useEffect while creating the filters. It eliminated a lot of the UI bugs I encountered because the different states I needed to track were out if sync
+* Learned how to do custom styling for checkboxes and how to track the checked state
+* Implimented viewport size driven component conditional rendering
+* Styling is still one of my favorite things to do
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## What I Want to Improve
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Fix bugs!
+* I want to learn how to map state, so I better understand how the different states effect eachother before coding in complex interactions
+* Use SCSS and SCSS mixins. It would have made conditional rendering easier and more future proof
+* Find a better way to implement conditional rendering for components and CSS. I was copy and pasting a lot of the same code and kept thinking there must be a better way
+* Complete a general file cleanup and find ways to simplify and make the code more DRY 
