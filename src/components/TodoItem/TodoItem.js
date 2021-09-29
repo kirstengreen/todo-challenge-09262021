@@ -6,7 +6,12 @@ export default function TodoItem( {todo, deleteTodo, toggleComplete, viewportWid
       <div className='todo_item'>
         <label htmlFor={todo.name}>
           <span className={`${ todo.complete ? 'complete_text' : '' }`}>{todo.name}</span>
-          <input type='checkbox' name={todo.name} id={todo.name} onClick={ () => toggleComplete(todo.id) }/>
+          <input 
+            type='checkbox' 
+            name={todo.name} 
+            id={todo.name} 
+            defaultChecked={todo.complete}
+            onClick={ () => toggleComplete(todo.id) }/>
           <span className='checkbox'></span>
         </label>
       </div>

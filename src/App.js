@@ -29,6 +29,7 @@ export default function App() {
     // }
   ])
   const [ activeCount, setActiveCount] = useState( todos.length )
+  const [ filteredTodos, setFilteredTodos ] = useState( todos )
 
 
   // LISTEN FOR AND UPDATE VIEWPORT SIZE CHANGE
@@ -41,8 +42,13 @@ export default function App() {
   })
 
 
-  // UPDATE ACTIVE TASKS COUNTER
-  useEffect( () => { 
+  // LISTEN FOR CHANGES IN TODO STATE
+  useEffect( () => {
+
+    // UPDATE FILTERED TODOS
+    setFilteredTodos(todos)
+
+    // UPDATE ACTIVE TODOS COUNT
     let counter = todos.length 
     for (let i=0; i < todos.length; i++) {
       if (todos[i].complete !== false) {
@@ -50,6 +56,7 @@ export default function App() {
       }
     }
     setActiveCount(counter)
+
   }, [todos] )
 
 
@@ -62,7 +69,31 @@ export default function App() {
     ))
   }
 
-  
+
+  // FILTER TODOS BY ALL
+  const allFilter = () => {
+    setFilteredTodos(todos.filter( (todo) => 
+      todo.id >= 0
+    ))
+  }
+
+
+  // FILTER TODOS BY ACTIVE
+  const activeFilter = () => {
+    setFilteredTodos(todos.filter( (todo) => 
+      todo.complete === false
+    ))
+  }
+
+
+  // FILTER TODOS BY COMPLETE
+  const completeFilter = () => {
+    setFilteredTodos(todos.filter( (todo) => 
+      todo.complete === true
+    ))
+  }
+
+
   // ADD TODO
   const addTodo = (todo) => {
     const id = Math.floor(Math.random() * 1000) + 1
@@ -106,7 +137,7 @@ export default function App() {
       { todos.length > 0 ? (
         <Fragment>
           <TodoList 
-            todos={todos} 
+            todos={filteredTodos} 
             deleteTodo={deleteTodo} 
             toggleComplete={toggleComplete}
             viewportWidth={viewportWidth}
@@ -115,7 +146,10 @@ export default function App() {
             activeCount={activeCount}
             deleteCompleted={deleteCompleted} 
             viewportWidth={viewportWidth}
-            mobileBreakpoint={mobileBreakpoint} />
+            mobileBreakpoint={mobileBreakpoint} 
+            allFilter={allFilter}
+            activeFilter={activeFilter}
+            completeFilter={completeFilter} />
         </Fragment>
       ) : (
         <EmptyTodoList 
