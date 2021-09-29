@@ -12,21 +12,21 @@ export default function App() {
   const mobileBreakpoint = 960;
   const [ viewportWidth, setViewportWidth ] = useState(window.innerWidth)
   const [ todos, setTodos ] = useState([
-    {
-      id: 1,
-      name: 'Cook dinner',
-      complete: false
-    },
-    {
-      id: 2,
-      name: 'Water plants',
-      complete: false
-    },
-    {
-      id: 3,
-      name: 'Take out the trash',
-      complete: false
-    }
+    // {
+    //   id: 1,
+    //   name: 'Cook dinner',
+    //   complete: false
+    // },
+    // {
+    //   id: 2,
+    //   name: 'Water plants',
+    //   complete: false
+    // },
+    // {
+    //   id: 3,
+    //   name: 'Take out the trash',
+    //   complete: false
+    // }
   ])
   const [ activeCount, setActiveCount] = useState( todos.length )
   const [ filteredTodos, setFilteredTodos ] = useState( todos )
@@ -42,8 +42,13 @@ export default function App() {
   })
 
 
-  // UPDATE ACTIVE TASKS COUNTER
-  useEffect( () => { 
+  // LISTEN FOR CHANGES IN TODO STATE
+  useEffect( () => {
+
+    // UPDATE FILTERED TODOS
+    setFilteredTodos(todos)
+
+    // UPDATE ACTIVE TODOS COUNT
     let counter = todos.length 
     for (let i=0; i < todos.length; i++) {
       if (todos[i].complete !== false) {
@@ -51,6 +56,7 @@ export default function App() {
       }
     }
     setActiveCount(counter)
+
   }, [todos] )
 
 
@@ -79,18 +85,11 @@ export default function App() {
     ))
   }
 
+
   // FILTER TODOS BY COMPLETE
   const completeFilter = () => {
     setFilteredTodos(todos.filter( (todo) => 
       todo.complete === true
-    ))
-  }
-
-
-  // DELETE TODO
-  const deleteTodo = (id) => {
-    setTodos(todos.filter( (todo) => 
-      todo.id !== id 
     ))
   }
 
@@ -102,6 +101,14 @@ export default function App() {
     setTodos(
       [...todos, newTodo]
     )
+  }
+
+
+  // DELETE TODO
+  const deleteTodo = (id) => {
+    setTodos(todos.filter( (todo) => 
+      todo.id !== id 
+    ))
   }
 
 
