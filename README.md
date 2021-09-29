@@ -16,6 +16,9 @@ This todo list app was presented as a coding challege. I was given a Figma mocku
 
 ## Known Issues
 
+* Create item input design is not complete
+* Filter active state not active 
+
 ## Understanding the Challenge
 
 Before I begain coding, I wanted to make sure I understood the app structure and what features I needed to build. I did a sketch in Goodnotes before jumping into the code.
