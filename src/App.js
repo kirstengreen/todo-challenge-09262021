@@ -29,6 +29,7 @@ export default function App() {
     }
   ])
   const [ activeCount, setActiveCount] = useState( todos.length )
+  const [ filteredTodos, setFilteredTodos ] = useState( todos )
 
 
   // LISTEN FOR AND UPDATE VIEWPORT SIZE CHANGE
@@ -59,6 +60,29 @@ export default function App() {
       todo.id === id ? {
         ...todo, complete: !todo.complete
       } : todo
+    ))
+  }
+
+
+  // FILTER TODOS BY ALL
+  const allFilter = () => {
+    setFilteredTodos(todos.filter( (todo) => 
+      todo.id >= 0
+    ))
+  }
+
+
+  // FILTER TODOS BY ACTIVE
+  const activeFilter = () => {
+    setFilteredTodos(todos.filter( (todo) => 
+      todo.complete === false
+    ))
+  }
+
+  // FILTER TODOS BY COMPLETE
+  const completeFilter = () => {
+    setFilteredTodos(todos.filter( (todo) => 
+      todo.complete === true
     ))
   }
 
@@ -94,7 +118,7 @@ export default function App() {
       { todos.length > 0 ? (
         <Fragment>
           <TodoList 
-            todos={todos} 
+            todos={filteredTodos} 
             deleteTodo={deleteTodo} 
             toggleComplete={toggleComplete}
             viewportWidth={viewportWidth}
@@ -103,7 +127,10 @@ export default function App() {
             activeCount={activeCount}
             deleteCompleted={deleteCompleted} 
             viewportWidth={viewportWidth}
-            mobileBreakpoint={mobileBreakpoint} />
+            mobileBreakpoint={mobileBreakpoint} 
+            allFilter={allFilter}
+            activeFilter={activeFilter}
+            completeFilter={completeFilter} />
         </Fragment>
       ) : (
         <EmptyTodoList 
